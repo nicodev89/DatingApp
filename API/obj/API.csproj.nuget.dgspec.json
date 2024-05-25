@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj": {}
+    "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj": {
+    "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj",
+        "projectPath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj",
         "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\obj\\",
+        "outputPath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",

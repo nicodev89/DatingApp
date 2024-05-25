@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eKkbY8ZuDW8q2xaVkgGLG/2IJrPM1dituqCKStsDsSzEeRmb2x6uORLF8/+mWs3cmRVZ1NcMv5/7eWpGbtlgWg==",
+  "dgSpecHash": "OomM0e6vHNBFxyevgijBIq3sSmhbr+Bd7bAxs+TC11lXOVjXVTQClIMy2fuBz66v6dcBXPN+YUUe+KujT8rBaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicos\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.30\\microsoft.data.sqlite.core.6.0.30.nupkg.sha512",
