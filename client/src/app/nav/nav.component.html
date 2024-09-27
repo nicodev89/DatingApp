@@ -2,32 +2,28 @@
   <div class="container">
     <a class="navbar-brand" href="#">Dating App</a>
 
-    @if(accountService.currentUser()) 
-    {
-      <div class="dropdown" dropdown></div>
-        <a
-          class="dropdown-toggle text-light text-decoration-none"
-          dropdownToggle
-          >Welcome {{ accountService.currentUser()?.username }}
-        </a>
-        <div class="dropdown-menu" *dropdownMenu>
-          <a class="dropdown-item">Edit Profile</a>
-          <a class="dropdown-item" (click)="logout()">Logout</a>
-        </div>
+    @if(accountService.currentUser()) {
+    <div class="dropdown" dropdown>
+      <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle
+        >Welcome {{ accountService.currentUser()?.username }}
+      </a>
+      <div class="dropdown-menu" *dropdownMenu>
+        <a class="dropdown-item">Edit Profile</a>
+        <a class="dropdown-item" (click)="logout()">Logout</a>
       </div>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Matches</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Messages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Lists</a>
-        </li>
-      </ul>
+    </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Matches</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Lists</a>
+      </li>
+    </ul>
     }
-
 
     <ng-container *ngIf="!accountService.currentUser()">
       <form #loginForm="ngForm" (ngSubmit)="login()" class="d-flex">
