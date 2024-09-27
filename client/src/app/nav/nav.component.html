@@ -2,8 +2,9 @@
   <div class="container">
     <a class="navbar-brand" href="#">Dating App</a>
 
-    <ng-container *ngIf="accountService.currentUser()">
-      <div class="dropdown" dropdown>
+    @if(accountService.currentUser()) 
+    {
+      <div class="dropdown" dropdown></div>
         <a
           class="dropdown-toggle text-light text-decoration-none"
           dropdownToggle
@@ -25,7 +26,8 @@
           <a class="nav-link" href="#">Lists</a>
         </li>
       </ul>
-    </ng-container>
+    }
+
 
     <ng-container *ngIf="!accountService.currentUser()">
       <form #loginForm="ngForm" (ngSubmit)="login()" class="d-flex">
