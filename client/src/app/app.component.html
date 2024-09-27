@@ -1,11 +1,15 @@
 <h1>{{ title }}</h1>
-<ul>
-  <ng-container *ngFor="let user of users">
-    <li>
-      <span>{{ user.userName }}</span>
-      <br />
-      <span>{{ user.id }}</span>
-    </li>
-    <hr />
-  </ng-container>
-</ul>
+
+<app-nav></app-nav>
+<div class="container me-2">
+  <ul>
+    <ng-container *ngFor="let user of users">
+      <li>
+        <span>{{ user.userName }}</span>
+        <br />
+        <span>{{ user.id }}</span>
+      </li>
+      <hr />
+    </ng-container>
+  </ul>
+</div>
