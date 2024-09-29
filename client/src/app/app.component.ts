@@ -10,16 +10,13 @@ import { AccountService } from './_services/account.service';
 })
 export class AppComponent implements OnInit {
   title = 'Dating App';
-  users: any[] = [];
   private accountService = inject(AccountService);
-  private readonly apiAddress: string = 'https://localhost:5001/api/users';
-  private readonly successMessage: string = 'Request was successful';
+
 
   // to inject you can also use httpe = inject(HttpClient)
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.getUsers();
     this.setCurrentUser();
   }
 
@@ -30,11 +27,5 @@ export class AppComponent implements OnInit {
     this.accountService.currentUser.set(user);
   }
 
-  getUsers(): void {
-    this.http.get(this.apiAddress).subscribe({
-      next: (response) => (this.users = response as any[]),
-      error: (error) => console.log(error),
-      complete: () => console.log(this.successMessage),
-    });
-  }
+
 }
