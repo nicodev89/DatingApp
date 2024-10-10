@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sa9pyJB+gXE=",
+  "dgSpecHash": "H2iek5OPqRs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicos\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
@@ -49,5 +49,16 @@
     "C:\\Users\\nicos\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Text.Json' 6.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

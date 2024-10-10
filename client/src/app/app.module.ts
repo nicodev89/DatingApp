@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   provideHttpClient,
+  withInterceptors,
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,12 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { provideRouter } from '@angular/router';
 import { provideToastr } from 'ngx-toastr';
+import { errorInterceptor } from './_interceptors/error.interceptor';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent],
   providers: [
-    provideHttpClient(withInterceptorsFromDi()),
+    provideHttpClient(withInterceptors([errorInterceptor])),
     provideAnimations(),
     provideToastr({
       positionClass: 'toast-bottom-right'
