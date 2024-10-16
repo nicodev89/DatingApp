@@ -38,5 +38,20 @@ app.UseAuthentication();
 
 app.MapControllers();
 
+// accessing the service without injecting anything. Service Locator Pattern. We only create the scope to seed data in the DB
+// then we dispose of the scope
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+try
+{
+    var context = services.GetRequiredService<DataContext>();
+    await context.Database.MigrateAsync(); // if db is not updated will run latest migrations (it will create also db in case does not exist yet)
+    await Seed.SeedUsers(context); 
+}
+catch (Exception ex) 
+{
+    var logger = services.GetRequiredService<ILogger<Program>>();
+    logger.LogError(ex, "An error occured during migration");
+}
 
 app.Run();

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H2iek5OPqRs=",
+  "dgSpecHash": "FeMBQ67VpmQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nicos\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.30\\microsoft.data.sqlite.core.6.0.30.nupkg.sha512",
@@ -50,6 +51,16 @@
     "C:\\Users\\nicos\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Extensions.Caching.Memory' 6.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "libraryId": "Microsoft.Extensions.Caching.Memory",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
     {
       "code": "NU1903",
       "level": "Warning",
