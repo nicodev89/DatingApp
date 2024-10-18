@@ -19,12 +19,13 @@ import { RegisterComponent } from './register/register.component';
 import { provideRouter } from '@angular/router';
 import { provideToastr } from 'ngx-toastr';
 import { errorInterceptor } from './_interceptors/error.interceptor';
+import { jwtInterceptor } from './_interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   bootstrap: [AppComponent],
   providers: [
-    provideHttpClient(withInterceptors([errorInterceptor])),
+    provideHttpClient(withInterceptors([errorInterceptor, jwtInterceptor])),
     provideAnimations(),
     provideToastr({
       positionClass: 'toast-bottom-right'

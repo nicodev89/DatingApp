@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FeMBQ67VpmQ=",
+  "dgSpecHash": "Nf4DltSl3as=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\nicos\\Desktop\\2023-24\\dotnetproject\\DatingApp\\api\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicos\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\nicos\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
