@@ -5,11 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using AutoMapper;
 using API.DTOs;
+using System.Security.Claims;
 
 namespace API.Controllers;
 
 [AllowAnonymous]
-public class UsersController(IUserRepository userRepository) : BaseApiController
+public class UsersController(IUserRepository userRepository, IMapper mapper) : BaseApiController
 {
 
     // OLD WAY TO DO STUFF HERE
@@ -46,5 +47,29 @@ public class UsersController(IUserRepository userRepository) : BaseApiController
         return user;
     }
 
+    [HttpPut]
+    public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto) 
+    {
+        // we are checking inside the Claim which is inside the token we are using for
+        // authorization of these requests
+        var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+        if(username is null) return BadRequest("No username found in token");
+
+        // using our repository to get the user
+        var user = await userRepository.GetUserByUsernameAsync(username);
+
+        if(user is null) return BadRequest("Cannot find user");
+
+        // here we are mapping the DTO object to the user. The dto member update object
+        // contains some of the properties of user so THOSE properties will be changed in the user object
+        // now since Entity Framework is tracking changes it will see the changes we are doing on user object
+        mapper.Map(memberUpdateDto, user);
+
+        // here we are saving those changes and since this is a Http Put request we return NoContent
+        // which means change was done but we have nothing to return
+        if(await userRepository.SaveAllAsync()) return NoContent();
+
+        return BadRequest("Failed to Update the user");
+    }
 }
